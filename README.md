@@ -79,9 +79,26 @@ Measures estimator variance. The improvement of the ARME models shows that chang
 
 ***
 
+### Comparision with Land Registry UK House Price Index (UKHPI)
+
+
+
+![ARME model closely mirrors the UKHPI](4indices.png)
+
+The three weighted indices are compared to the
+official [UK House Price Index hedonic regression model](https://landregistry.data.gov.uk/app/ukhpi/browse?from=2023-02-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Funited-kingdom&to=2024-02-01&lang=en). The UK HPI is highly stylised, incorporating a variety of property specific characteristics, such as square footage, number of bedrooms and area demographics. The index is jointly produced by the HM Land Registry, Office for National Statistics (ONS), Land and Property Services Northern Ireland (LPSNI) and Registers of Scotland. Hence, the UKHPI is a useful comparative benchmark to compare with the more parsimonious repeat sales models. 
+
+Up until 2016, the four indices track each other well, with no
+obvious lead/lag relationship between them. After 2016, the UP and ARME – RS indices diverge in opposing directions away from the UK HPI. ARME however trends closely to the UK HPI over most of the sample period. The similarity between the highly stylised, data intensive UK HPI and the parsimonious ARME model is impressive. It emphasises the benefit adding single sales into the estimation procedure has on reducing selection bias, better representing price trends for the whole housing market.
+
+
+
+
+***
+
 ### Concluding Remarks
 
-The ARME models outperformed the UP model in ME, exhibiting less bias, prediction accuracy and estimator variance. Hence, the ARME is ultimately superior for price estimation and overall UK-wide representation. 
+The ARME models outperformed the UP model in ME and followed the UKHPI the closest, exhibiting less bias, prediction accuracy and estimator variance. Hence, the ARME is ultimately superior for price estimation and overall UK-wide representation. 
 
 ***
 

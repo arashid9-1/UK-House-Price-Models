@@ -11,7 +11,7 @@ the Autoregressive Mixed Effects Model. The model corrects the inefficiencies of
 Unbalanced Panel method and is less prone to selection bias. The two models, UP and
 ARME, were trained and tested on the [HM Land Registry Price Paid dataset](http://prod1.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.txt). The ARME
 model outperformed the UP model in root mean squared error. Our results also suggest that
-the ARME model is more representative of the overall UK housing market. The [full report]() goes into further depth, detailing the full methodology, data descriptives and model diagnostics. 
+the ARME model is more representative of the overall UK housing market. The [full report](https://github.com/arashid9-1/UK-House-Price-Models/blob/1d306c96eec9d40d436908f8cc66fdf68d978875/Two%20New%20Housing%20Market%20Indicators%20-%20ARME%20and%20ADI.pdf) goes into further depth, detailing the full methodology, data descriptives and model diagnostics. 
 ***
 ### Repeat Sales Models vs Hedonic Models
 
@@ -43,13 +43,13 @@ This model incorporates three key changes:
 
 2. Incorporate error heteroscedasticity and serial correlation 
    
-   The white noise process of the UP error term suggests that exogenous shocks to house prices, such as house deterioration, have a permanent effect on future valuations of the property. Data and previous research ([see report for further details]()) imply a house price shock to one property pushes its valuation away from average house price for the region, however is mean reverting in the future. As such, a previous sale of a property contains less information regarding the current value of the house than the mean sector house price the further the gap between sales. Hence, error autoregression is modelled by $\phi^\gamma$, where $\gamma$ is the gap time between sales in years. 
+   The white noise process of the UP error term suggests that exogenous shocks to house prices, such as house deterioration, have a permanent effect on future valuations of the property. Data and previous research ([see report for further details](https://github.com/arashid9-1/UK-House-Price-Models/blob/1d306c96eec9d40d436908f8cc66fdf68d978875/Two%20New%20Housing%20Market%20Indicators%20-%20ARME%20and%20ADI.pdf)) imply a house price shock to one property pushes its valuation away from average house price for the region, however is mean reverting in the future. As such, a previous sale of a property contains less information regarding the current value of the house than the mean sector house price the further the gap between sales. Hence, error autoregression is modelled by $\phi^\gamma$, where $\gamma$ is the gap time between sales in years. 
 
 3. Use single sales in estimation process
    
    Repeat sales estimates likely suffer from sample selection bias since those homes are different from properties that had only transferred hands once over the period. For example, starter homes in large cities are likely to sell repeatedly unlike a countryside mansion. Including single sales into the estimation should help mitigate estimator bias. 
 
-A explanation of model specification and implementation can be found in the report and the supplied [code]().
+A explanation of model specification and implementation can be found in the report and the supplied [code](https://github.com/arashid9-1/UK-House-Price-Models/blob/1d306c96eec9d40d436908f8cc66fdf68d978875/up_arme.py).
 ***
 ### Performance Results 
 
